@@ -4,11 +4,36 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- https://www.w3schools.com/icons/google_icons_intro.asp -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>FlightPath</title>
   </head>
 
   <body>
-
+    <div id="header">
+      <div class="header-container">
+        <a href="/" id="home">
+          <img src="/img/logo.png" id="logo">FlightPath
+        </a>
+      </div>
+      <div class="header-container">
+        <form method="GET" id="search-container">
+          <input type="text" name="airport" placeholder="Search for an airport...">
+          <button type="submit"><i class="material-icons">search</i></button>
+        </form>
+      </div>
+      <div class="header-container">
+        <nav id="account">
+          <a href="/login">Login</a>
+          <a href="/register">Register</a>
+        </nav>
+      </div>
+    </div>
   </body>
+
+  {{{body}}}
 
 </html>

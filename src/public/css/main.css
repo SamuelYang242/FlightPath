@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* https://www.w3schools.com/html/html_images_background.asp */
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  background-color: #154479;
+  height: 12%;
+  align-items: center;
+  font-size: 25px;
+  justify-content: space-between;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(255, 240, 109);
+  border-bottom-width: 5px;
+}
+
+.header-container {
+  display: flex;
+  width: 33%;
+}
+
+.header-container:nth-child(1) {
+  padding-left: 20px;
+  justify-content: flex-start;
+}
+
+.header-container:nth-child(2) {
+  justify-content: center;
+}
+
+.header-container:nth-child(3) {
+  height: 100%;
+}
+
+#home {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#home:hover {
+  cursor: grab;
+}
+
+#logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+#search-container {
+  display: flex;
+  align-items: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  background-color: white;
+  border-radius: 5%/50%;
+  width: 350px;
+}
+
+#search-container input {
+  font-size: 18px;
+  border-radius: 5%/50%;
+  border: none;
+  outline: none;
+  width: 330px;
+}
+
+#search-container button {
+  display: flex;
+  align-items: center;
+  color: rgb(172, 172, 172);
+  background: none;
+  border: none;
+}
+
+#search-container button:hover {
+  cursor: grab;
+}
+
+#account {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#account a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+  height: 100%;
+  width: 30%;
+  background: none;
+  text-decoration: none;
+  border: none;
+}
+
+#account a:hover {
+  background: rgb(0, 0, 92);
+  cursor: grab;
+}
+
+.center-container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.inside-center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/opacity */
+  background: rgb(0 0 0 / 90%);
+}
+
+#welcome-text {
+  margin: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 85px;
+}
+
+#login-button {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  width: 70%;
+  text-align: center;
+
+  /* https://www.w3schools.com/css/css3_gradients.asp */
+  background: linear-gradient(to bottom, rgb(63, 63, 199), rgb(33, 33, 94));
+
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.register-button {
+  color: rgb(215, 215, 215);
+  text-decoration: underline;
+}

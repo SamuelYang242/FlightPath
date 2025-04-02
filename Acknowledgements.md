@@ -5,3 +5,5 @@ Most of my CSS learning came from:
 https://www.w3schools.com/css/
 https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout
 Anything directly copy-pasted from the above-mentioned websites are directly acknowledged in comments
+
+Website name is generated using chatGPT because I am not creative enough. I sure hope it's not copyrighted somewhere.

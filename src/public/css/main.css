@@ -153,17 +153,21 @@ input[type='password'] {
   text-decoration: none;
   color: white;
   font-size: 30px;
-  width: 70%;
+  width: 100%;
   text-align: center;
 
   /* https://www.w3schools.com/css/css3_gradients.asp */
   /* Idea came from chatGPT prompt to make login button more interesting */
   background: linear-gradient(to bottom, rgb(63, 63, 199), rgb(33, 33, 94));
-
+  border: none;
   border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 15px;
+}
+
+.login-button-prim:hover {
+  cursor: grab;
 }
 
 .login-button-sec {

@@ -12,12 +12,12 @@ const UserSchema = new mongoose.Schema({
 
 const FlightSchema = new mongoose.Schema({
   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  airline: { type: String },
+  airline: { type: String, required: true },
   flightNumber: { type: String, required: true },
   departureAirport: { type: String, required: true },
   arrivalAirport: { type: String, required: true },
   duration: { type: Number, required: true },
-  date: { type: Date }
+  date: { type: Date, required: true }
 });
 
 mongoose.model('User', UserSchema);

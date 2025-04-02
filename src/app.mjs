@@ -1,5 +1,7 @@
 import './config.mjs';
 import './db.mjs';
+import * as auth from './auth.mjs';
+
 import express from 'express';
 import session from 'express-session';
 import mongoose from 'mongoose';
@@ -19,6 +21,9 @@ app.use(session({
   saveUninitialized: true,
 }));
 
+const User = mongoose.model('User');
+const Flight = mongoose.model('Flight');
+
 app.set('view engine', 'hbs');
 
 app.get("/", (req, res) => {
@@ -29,11 +34,21 @@ app.get("/login", (req, res) => {
   res.render('login');
 });
 
+
 app.get("/register", (req, res) => {
   res.render('register');
 })
 
-const User = mongoose.model('User');
-const Flight = mongoose.model('Flight');
+app.post("/register", async (req, res) => {
+  const username = sanitize(req.body.username);
+  try {
+    const user = await auth.register(username, req.body.password);
+    res.render('home');
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+  res.render('register');
+})
 
 app.listen(process.env.PORT || 3000);

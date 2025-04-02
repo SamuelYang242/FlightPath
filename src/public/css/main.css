@@ -66,14 +66,14 @@ body {
   padding-bottom: 2px;
   padding-left: 10px;
   background-color: white;
-  border-radius: 5%/50%;
+  border-radius: 20px/50%;
   width: 350px;
 }
 
 input[type='text'],
 input[type='password'] {
   font-size: 18px;
-  border-radius: 5%/50%;
+  border-radius: 15px/50%;
   border: none;
   outline: none;
 }
@@ -117,7 +117,7 @@ input[type='password'] {
 }
 
 #account a:hover {
-  background: rgb(0, 0, 92);
+  background: rgb(0, 0, 98);
   cursor: grab;
 }
 
@@ -149,7 +149,7 @@ input[type='password'] {
   font-size: 85px;
 }
 
-.login-button {
+.login-button-prim {
   text-decoration: none;
   color: white;
   font-size: 30px;
@@ -166,8 +166,8 @@ input[type='password'] {
   margin-bottom: 15px;
 }
 
-.register-button {
-  color: rgb(215, 215, 215);
+.login-button-sec {
+  color: rgb(185, 185, 185);
   text-decoration: underline;
 }
 
@@ -200,7 +200,7 @@ input[type='password'] {
   margin-bottom: 20px;
 }
 
-#login a.login-button {
+#login a.login-button-prim {
   width: 100%;
   margin-bottom: 10px;
 }

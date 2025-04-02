@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: row;
   background-color: #154479;
-  height: 12%;
+  height: 80px;
   align-items: center;
   font-size: 25px;
   justify-content: space-between;
@@ -70,11 +70,15 @@ body {
   width: 350px;
 }
 
-#search-container input {
+input[type='text'],
+input[type='password'] {
   font-size: 18px;
   border-radius: 5%/50%;
   border: none;
   outline: none;
+}
+
+#search-container input {
   width: 330px;
 }
 
@@ -123,7 +127,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
 }
 
 .inside-center-container {
@@ -131,22 +134,22 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px;
   padding-top: 40px;
   padding-bottom: 30px;
+  color: white;
 
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/opacity */
   background: rgb(0 0 0 / 90%);
 }
 
-#welcome-text {
+.inside-center-container h2 {
   margin: 40px;
-  color: white;
   font-weight: bold;
   font-size: 85px;
 }
 
-#login-button {
+.login-button {
   text-decoration: none;
   color: white;
   font-size: 30px;
@@ -154,6 +157,7 @@ body {
   text-align: center;
 
   /* https://www.w3schools.com/css/css3_gradients.asp */
+  /* Idea came from chatGPT prompt to make login button more interesting */
   background: linear-gradient(to bottom, rgb(63, 63, 199), rgb(33, 33, 94));
 
   border-radius: 10px;
@@ -165,4 +169,38 @@ body {
 .register-button {
   color: rgb(215, 215, 215);
   text-decoration: underline;
+}
+
+#login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#login p {
+  font-size: 18px;
+}
+
+#login input {
+  width: 96%;
+  padding-left: 10px;
+  height: 30px;
+}
+
+#login-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:last-of-type */
+#login input:last-of-type {
+  margin-bottom: 20px;
+}
+
+#login a.login-button {
+  width: 100%;
+  margin-bottom: 10px;
 }

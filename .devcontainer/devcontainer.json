@@ -4,5 +4,5 @@
     "PORT": "${PORT}",
     "DSN": "${DSN}"
   },
-  "postStartCommand": "npx --yes pm2 start app.mjs "
+  "postStartCommand": "npx --yes pm2 start /src/app.mjs "
 }

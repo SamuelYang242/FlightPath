@@ -79,7 +79,7 @@ app.post("/register", async (req, res) => {
   try {
     const user = await auth.register(username, req.body.password);
     await auth.authSession(req, user);
-    res.render('account');
+    res.redirect('/account');
   }
   catch (err) {
     if (displayErrors.includes(err.message)) {

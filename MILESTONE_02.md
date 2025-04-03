@@ -7,7 +7,9 @@ https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment
 
 Special Instructions for Using Form (or Login details if auth is part of your project)
 ---
-Create a new user under the register page
+Create a new user under the register page or login using credentials username: username1234; password: password1234. 
+The account page isn't implemented yet, but you will have begun an authenticated session. 
+Unfortunately, I do not have a log out button yet but if you do restart the app, you will see you are unable to reach the /account path without logging in first. 
 
 URL for form 
 ---

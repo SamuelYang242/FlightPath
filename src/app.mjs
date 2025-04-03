@@ -46,7 +46,7 @@ app.post('/login', async (req, res) => {
   const username = sanitize(req.body.username);
   try {
     const user = await auth.login(username, req.body.password);
-    auth.authSession(req, user);
+    await auth.authSession(req, user);
     res.redirect('account');
   }
   catch (err) {
@@ -68,7 +68,7 @@ app.post("/register", async (req, res) => {
   const username = sanitize(req.body.username);
   try {
     const user = await auth.register(username, req.body.password);
-    auth.authSession(req, user);
+    await auth.authSession(req, user);
     res.render('account');
   }
   catch (err) {
@@ -79,6 +79,11 @@ app.post("/register", async (req, res) => {
       res.render('register', { error: "*Registration error" });
     }
   }
+})
+
+app.get('/account', (req, res) => {
+  console.log(req.session.user);
+  res.render('account', ({ user: req.session.user }));
 })
 
 app.listen(process.env.PORT || 3000);

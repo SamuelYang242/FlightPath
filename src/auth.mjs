@@ -46,6 +46,7 @@ const authSession = (req, user) => {
     req.session.regenerate((err) => {
       if (!err) {
         req.session.user = user;
+        console.log(req.session.user);
         fulfill(user);
       } else {
         reject(err);

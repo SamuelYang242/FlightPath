@@ -13,12 +13,12 @@ Unfortunately, I do not have a log out button yet but if you do restart the code
 
 URL for form 
 ---
-[Registration form](https://scaling-bassoon-g49q7p5qwr4fw66w-3000.app.github.dev/register)
-[Login form](https://scaling-bassoon-g49q7p5qwr4fw66w-3000.app.github.dev/login)
+[Registration form](https://reimagined-computing-machine-5gr5459x5rv737pjw-3000.app.github.dev/register)
+[Login form](https://reimagined-computing-machine-5gr5459x5rv737pjw-3000.app.github.dev/login)
 
 URL for form result
 ---
-[Account page](https://scaling-bassoon-g49q7p5qwr4fw66w-3000.app.github.dev/account)
+[Account page](https://reimagined-computing-machine-5gr5459x5rv737pjw-3000.app.github.dev/account)
 Once again, this will simply redirect you to the login page if you are not already logged in. 
 
 URL to github that shows line of code where research topic(s) are used / implemented

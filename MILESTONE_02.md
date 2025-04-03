@@ -7,7 +7,7 @@ https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment
 
 Special Instructions for Using Form (or Login details if auth is part of your project)
 ---
-(TODO: if your app requires special instructions to use or if your app requires authentication, add information here; otherwise, leave blank)
+Create a new user under the register page
 
 URL for form 
 ---
@@ -19,8 +19,8 @@ URL for form result
 
 URL to github that shows line of code where research topic(s) are used / implemented
 --- 
-(TODO: add link to github url that shows line or lines of code that demonstrate in progress work on at least one research topic)
+All research code is inside [testing.html](./testing/testing_leaflet.html) and [testing.js](./testing/testing_leaflet.js)
 
 References 
 ---
-All acknowledgements are written in ![Acknowledgements.md](Acknowledgements.md)
+All acknowledgements are written in [Acknowledgements.md](Acknowledgements.md)

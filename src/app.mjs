@@ -24,7 +24,7 @@ app.use(session({
 const User = mongoose.model('User');
 const Flight = mongoose.model('Flight');
 
-const displayErrors = ['*Username not found', '*Incorrect password', '*Please enter a username and password', '*Password must be 8 characters or more', '*Username already exists']
+const displayErrors = ['*Username not found', '*Incorrect password', '*Please enter a username and password', '*Password must be 8 characters or more', '*Username already exists'];
 
 app.set('view engine', 'hbs');
 
@@ -38,7 +38,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.render('login');
+  if (req.session.user) {
+    res.redirect('/account');
+  }
+  else {
+    res.render('login');
+  }
 });
 
 // Inspired by code from app.mjs in homework05
@@ -57,11 +62,16 @@ app.post('/login', async (req, res) => {
       res.render('login', { error: "*Login error" });
     }
   }
-})
+});
 
 app.get("/register", (req, res) => {
-  res.render('register');
-})
+  if (req.session.user) {
+    res.redirect('/account');
+  }
+  else {
+    res.render('register');
+  }
+});
 
 // Inspired by code from app.mjs in homework05
 app.post("/register", async (req, res) => {
@@ -79,11 +89,15 @@ app.post("/register", async (req, res) => {
       res.render('register', { error: "*Registration error" });
     }
   }
-})
+});
 
 app.get('/account', (req, res) => {
-  console.log(req.session.user);
-  res.render('account', ({ user: req.session.user }));
-})
+  if (!req.session.user) {
+    res.redirect('/login');
+  }
+  else {
+    res.render('account', ({ user: req.session.user }));
+  }
+});
 
 app.listen(process.env.PORT || 3000);

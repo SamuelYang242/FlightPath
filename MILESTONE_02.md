@@ -9,15 +9,17 @@ Special Instructions for Using Form (or Login details if auth is part of your pr
 ---
 Create a new user under the register page or login using credentials username: username1234; password: password1234. 
 The account page isn't implemented yet, but you will have begun an authenticated session. 
-Unfortunately, I do not have a log out button yet but if you do restart the app, you will see you are unable to reach the /account path without logging in first. 
+Unfortunately, I do not have a log out button yet but if you do restart the codespace, you will see you are unable to reach the /account path without logging in first. 
 
 URL for form 
 ---
-(TODO: add link to a functioning form; okay to use temporary domain of your own codespaces container)
+[Registration form](https://scaling-bassoon-g49q7p5qwr4fw66w-3000.app.github.dev/register)
+[Login form](https://scaling-bassoon-g49q7p5qwr4fw66w-3000.app.github.dev/login)
 
 URL for form result
 ---
-(TODO: if applicable, add link to page that shows results of submitting form)
+[Account page](https://scaling-bassoon-g49q7p5qwr4fw66w-3000.app.github.dev/account)
+Once again, this will simply redirect you to the login page if you are not already logged in. 
 
 URL to github that shows line of code where research topic(s) are used / implemented
 --- 

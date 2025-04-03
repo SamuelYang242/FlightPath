@@ -24,31 +24,61 @@ app.use(session({
 const User = mongoose.model('User');
 const Flight = mongoose.model('Flight');
 
+const displayErrors = ['*Username not found', '*Incorrect password', '*Please enter a username and password', '*Password must be 8 characters or more', '*Username already exists']
+
 app.set('view engine', 'hbs');
 
 app.get("/", (req, res) => {
-  res.render('home');
+  if (req.session.user) {
+    res.redirect('/account')
+  }
+  else {
+    res.render('home');
+  }
 });
 
 app.get("/login", (req, res) => {
   res.render('login');
 });
 
+// Inspired by code from app.mjs in homework05
+app.post('/login', async (req, res) => {
+  const username = sanitize(req.body.username);
+  try {
+    const user = await auth.login(username, req.body.password);
+    auth.authSession(req, user);
+    res.redirect('account');
+  }
+  catch (err) {
+    if (displayErrors.includes(err.message)) {
+      res.render('login', { error: err.message });
+    }
+    else {
+      res.render('login', { error: "*Login error" });
+    }
+  }
+})
 
 app.get("/register", (req, res) => {
   res.render('register');
 })
 
+// Inspired by code from app.mjs in homework05
 app.post("/register", async (req, res) => {
   const username = sanitize(req.body.username);
   try {
     const user = await auth.register(username, req.body.password);
-    res.render('home');
+    auth.authSession(req, user);
+    res.render('account');
   }
   catch (err) {
-    console.log(err.message);
+    if (displayErrors.includes(err.message)) {
+      res.render('register', { error: err.message });
+    }
+    else {
+      res.render('register', { error: "*Registration error" });
+    }
   }
-  res.render('register');
 })
 
 app.listen(process.env.PORT || 3000);

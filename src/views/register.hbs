@@ -7,6 +7,9 @@
         <input type="text" name="username" placeholder="Username...">
         <p>Password: </p>
         <input type="password" name="password" placeholder="Password...">
+        {{#if error}}
+          <p class="error">{{error}}</p>
+        {{/if}}
         <div id="login-container">
           <button class="login-button-prim" type="submit">Register</button>
           Already have an account? <a href="/login" class="login-button-sec">Log in</a>

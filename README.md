@@ -105,7 +105,7 @@ An example Flight
 
 9 points total out of 8 required points 
 
-## [Link to Initial Main Project File](app.mjs) 
+## [Link to Initial Main Project File](./src/app.mjs) 
 
 ## Annotations / References Used
 * [Leaflet API](https://leafletjs.com)

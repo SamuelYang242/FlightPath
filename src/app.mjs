@@ -26,6 +26,7 @@ const Flight = mongoose.model('Flight');
 
 const displayErrors = ['*Username not found', '*Incorrect password', '*Please enter a username and password', '*Password must be 8 characters or more', '*Username already exists'];
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.get("/", (req, res) => {

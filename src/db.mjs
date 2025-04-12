@@ -17,7 +17,8 @@ const FlightSchema = new mongoose.Schema({
   departureAirport: { type: String, required: true },
   arrivalAirport: { type: String, required: true },
   duration: { type: Number, required: true },
-  date: { type: Date, required: true }
+  date: { type: Date, required: true },
+  type: { type: String, required: true }
 });
 
 mongoose.model('User', UserSchema);

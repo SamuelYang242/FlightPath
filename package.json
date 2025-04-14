@@ -19,12 +19,15 @@
   "description": "The Aviation Dashboard is a web application that allows users to log and track their flight hours, places they've flown, and record time spent with different airlines and aircraft types.",
   "dependencies": {
     "bcryptjs": "^3.0.2",
+    "connect-flash": "^0.1.1",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "express-session": "^1.18.1",
     "hbs": "^4.2.0",
     "mongo-sanitize": "^1.1.0",
-    "mongoose": "^8.13.1"
+    "mongoose": "^8.13.1",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",

@@ -8,6 +8,8 @@ import mongoose from 'mongoose';
 import sanitize from 'mongo-sanitize';
 import path from 'path'
 import { fileURLToPath } from 'url';
+import passport from 'passport';
+import flash from 'connect-flash';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -20,6 +22,9 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
 }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
 const User = mongoose.model('User');
 const Flight = mongoose.model('Flight');
@@ -38,35 +43,25 @@ app.get("/", (req, res) => {
   }
 });
 
+
 app.get("/login", (req, res) => {
-  if (req.session.user) {
+  if (req.isAuthenticated()) {
     res.redirect('/account');
   }
   else {
-    res.render('login');
+    res.render('login', { error: req.flash('error')[0] });
   }
 });
 
-// Inspired by code from app.mjs in homework05
-app.post('/login', async (req, res) => {
-  const username = sanitize(req.body.username);
-  try {
-    const user = await auth.login(username, req.body.password);
-    await auth.authSession(req, user);
-    res.redirect('account');
-  }
-  catch (err) {
-    if (displayErrors.includes(err.message)) {
-      res.render('login', { error: err.message });
-    }
-    else {
-      res.render('login', { error: "*Login error" });
-    }
-  }
-});
+//https://www.passportjs.org/howtos/password/
+app.post('/login', passport.authenticate('local', {
+  successRedirect: '/account',
+  failureRedirect: '/login',
+  failureFlash: true
+}));
 
 app.get("/register", (req, res) => {
-  if (req.session.user) {
+  if (req.isAuthenticated()) {
     res.redirect('/account');
   }
   else {
@@ -79,8 +74,15 @@ app.post("/register", async (req, res) => {
   const username = sanitize(req.body.username);
   try {
     const user = await auth.register(username, req.body.password);
-    await auth.authSession(req, user);
-    res.redirect('/account');
+    // https://www.passportjs.org/concepts/authentication/login/
+    req.login(user, (err) => {
+      if (err) {
+        return next(err);
+      }
+      else {
+        return res.redirect('/account');
+      }
+    })
   }
   catch (err) {
     if (displayErrors.includes(err.message)) {
@@ -93,11 +95,11 @@ app.post("/register", async (req, res) => {
 });
 
 app.get('/account', (req, res) => {
-  if (!req.session.user) {
+  if (req.isUnauthenticated()) {
     res.redirect('/login');
   }
   else {
-    res.render('account', ({ user: req.session.user }));
+    res.render('account', ({ user: req.user }));
   }
 });
 

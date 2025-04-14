@@ -2,6 +2,9 @@
 
 import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose';
+import passport from 'passport';
+import Strategy from 'passport-local';
+import flash from 'connect-flash';
 
 const User = mongoose.model('User');
 
@@ -30,32 +33,32 @@ const register = async (username, password) => {
   return newUser;
 };
 
-const login = async (username, password) => {
+
+//https://www.passportjs.org/howtos/password/
+const verify = async (username, password, cb) => {
   const user = await User.findOne({ username: username });
   if (!user) {
-    throw ({ message: '*Username not found' });
+    return cb(null, false, { message: '*Username not found' });
   }
   if (!bcrypt.compareSync(password, user.password)) {
-    throw ({ message: "*Incorrect password" });
+    return cb(null, false, { message: "*Incorrect password" });
   }
-  return user;
+  return cb(null, user);
 };
+passport.use(new Strategy(verify));
 
-const authSession = (req, user) => {
-  return new Promise((fulfill, reject) => {
-    req.session.regenerate((err) => {
-      if (!err) {
-        req.session.user = user;
-        fulfill(user);
-      } else {
-        reject(err);
-      }
-    });
-  });
-};
+//https://github.com/passport/todos-express-password
+passport.serializeUser((user, done) => {
+  done(null, user.username);
+});
+
+
+//https://github.com/passport/todos-express-password
+passport.deserializeUser(async (username, done) => {
+  const user = await User.findOne({ username: username });
+  done(null, user);
+});
 
 export {
   register,
-  login,
-  authSession,
 };

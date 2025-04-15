@@ -28,6 +28,9 @@
       {{#if user}}
         <nav id="account">
           <a href="/account">Hi {{user.username}}!</a>
+          <form action="/logout" method="POST">
+            <button>Logout</button>
+          </form>
         </nav>
       {{else}}
         <nav id="account">

@@ -1,13 +1,14 @@
-// The code in this file is largely if not entirely rewritten code from auth.mjs in homework05
+// Most of the code in this file is taken from passport documentation, largely from: 
+// https://www.passportjs.org/concepts/authentication/login/
 
 import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose';
 import passport from 'passport';
 import Strategy from 'passport-local';
-import flash from 'connect-flash';
 
 const User = mongoose.model('User');
 
+// Inspired by my code in auth.mjs in homework05
 const register = async (username, password) => {
   if (!username || !password) {
     throw ({ message: '*Please enter a username and password' })
@@ -34,14 +35,13 @@ const register = async (username, password) => {
 };
 
 
-//https://www.passportjs.org/howtos/password/
 const verify = async (username, password, cb) => {
   const user = await User.findOne({ username: username });
   if (!user) {
-    return cb(null, false, { message: '*Username not found' });
+    return cb(null, false, { message: 'Username not found' });
   }
   if (!bcrypt.compareSync(password, user.password)) {
-    return cb(null, false, { message: "*Incorrect password" });
+    return cb(null, false, { message: "Incorrect password" });
   }
   return cb(null, user);
 };

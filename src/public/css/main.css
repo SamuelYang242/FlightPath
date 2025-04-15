@@ -10,6 +10,10 @@ body {
   margin: 0px;
   height: 100vh;
   width: 100vw;
+
+  /* https://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 #header {
@@ -70,8 +74,7 @@ body {
   width: 350px;
 }
 
-input[type='text'],
-input[type='password'] {
+input:not([type='submit']) {
   font-size: 18px;
   border-radius: 15px/50%;
   border: none;
@@ -119,13 +122,13 @@ button {
 }
 
 #account a:hover,
-button:hover {
+#account button:hover {
   background: rgb(0, 0, 98);
   cursor: grab;
 }
 
 .center-container {
-  height: 80%;
+  height: 87%;
   width: 100%;
   display: flex;
   align-items: center;
@@ -152,7 +155,7 @@ button:hover {
   font-size: 85px;
 }
 
-.login-button-prim {
+.button-prim {
   text-decoration: none;
   color: white;
   font-size: 30px;
@@ -169,7 +172,7 @@ button:hover {
   margin-bottom: 15px;
 }
 
-.login-button-prim:hover {
+.button-prim:hover {
   cursor: grab;
 }
 
@@ -186,8 +189,11 @@ button:hover {
   align-items: start;
 }
 
-#login p {
+#login label,
+p {
   font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #login input {
@@ -212,4 +218,61 @@ button:hover {
 .error {
   margin-bottom: 0;
   color: red;
+}
+
+#account-container {
+  height: 1000px;
+  width: 90%;
+  margin: auto;
+  background-color: rgb(228, 247, 255);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#map {
+  height: 500px;
+  width: 90%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(0, 29, 133);
+  border-bottom-width: 5px;
+}
+
+#add-button-container {
+  margin: 30px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add {
+  font-size: 18px;
+  width: 800px;
+  display: grid;
+  justify-items: right;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 40px);
+  row-gap: 20px;
+}
+
+#add * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add input:not([type='submit']) {
+  height: 30px;
+  padding-left: 10px;
+  margin-left: 15px;
+  width: 250px;
 }

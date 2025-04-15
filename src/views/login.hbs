@@ -3,15 +3,15 @@
     <div class="inside-center-container">
       <h2>Login</h2>
       <form method="POST" id="login">
-        <p>Username: </p>
+        <label>Username: </label>
         <input type="text" name="username" placeholder="Username...">
-        <p>Password: </p>
+        <label>Password: </label>
         <input type="password" name="password" placeholder="Password...">
         {{#if error}}
           <p class="error">{{error}}</p>
         {{/if}}
         <div id="login-container">
-          <button class="login-button-prim" type="submit">Login</button>
+          <button class="button-prim" type="submit">Login</button>
           Don't have an account?
           <a href="/register" class="login-button-sec">Register</a>
         </div>

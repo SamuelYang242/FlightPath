@@ -32,11 +32,12 @@ const Flight = mongoose.model('Flight');
 // This is just here to handle the expected vs unexpected errors in registration
 const displayErrors = ['*Please enter a username and password', '*Password must be 8 characters or more', '*Username already exists'];
 
+
 app.set('views', path.join(__dirname, 'views')); // Ensure codespaces can find views folder in src
 app.set('view engine', 'hbs');
 
 app.get("/", (req, res) => {
-  if (req.session.user) {
+  if (req.user) {
     res.redirect('/account');
   }
   else {
@@ -49,11 +50,12 @@ app.get("/login", (req, res) => {
     res.redirect('/account');
   }
   else {
-    if (req.flash('error').length === 0) {
+    const error = req.flash('error')[0];
+    if (!error) {
       res.render('login');
     }
     else {
-      res.render('login', { error: '*' + req.flash('error')[0] });
+      res.render('login', { error: '*' + error });
     }
   }
 });
@@ -107,12 +109,21 @@ app.post("/register", async (req, res, next) => {
 });
 
 app.get('/account', (req, res) => {
-  if (req.isUnauthenticated()) {
-    res.redirect('/login');
-  }
-  else {
-    res.render('account', ({ user: req.user }));
-  }
+  // if (req.isUnauthenticated()) {
+  // res.redirect('/login');
+  // }
+  // else {
+  res.render('account', ({ user: req.user }));
+  // }
 });
+
+app.get('/add', (req, res) => {
+  // if (req.isUnauthenticated()) {
+  // res.redirect('/login');
+  // }
+  // else {
+  res.render('add', ({ user: req.user }));
+  // }
+})
 
 app.listen(process.env.PORT || 3000);

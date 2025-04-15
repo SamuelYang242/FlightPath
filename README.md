@@ -82,28 +82,38 @@ An example Flight
 
 ## Research Topics
 
-* Unit Testing
+* Client-side javascript modules and libraries (leaflet, chartjs)
 
-  * What is it? Unit tests ensure specific, isolated parts of code are running s they should.
+  * What is it? Libraries to generate visuals for the website to display
 
-  * Why use it? It allows for efficient and thorough testing, making sure everything works as it is supposed to, even under abnormal circumstances.
+  * Why use it? Display data to the user in an interactive way
 
-  * Possible Candidates: Jasmine, Mocha
+  * Possible Candidates: leaflet, chartjs
 
-  * Points: 3
+  * Points: 4
+
+* Server-side javascript modules and libraries (passportjs)
+
+  * What is it? Middleware for authentication with Node.js
+
+  * Why use it? Create more robust login and authentication systems
+
+  * Possible Candidates: Passportjs with LocalStrategy(ies)
+
+  * Points: 4
 
 * External API Integration
 
   * What is it? APIs provide the ability to integrate third-party resources into an application.
 
-  * Why use it? Allows users to view live airport weather information as well as see flight history on a map
+  * Why use it? Allows users to view live airport weather information 
 
-  * Possible Candidates: aviationweater.gov API, leafletjs API.
+  * Possible Candidates: aviationweater.gov API
 
-  * Points: 6 (leaflet API specifically seems to involve a solid amount of code that I don't understand yet)
+  * Points: 3
 
 
-9 points total out of 8 required points 
+11 points total out of 10 required points 
 
 ## [Link to Initial Main Project File](./src/app.mjs) 
 

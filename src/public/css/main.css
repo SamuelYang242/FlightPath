@@ -294,3 +294,30 @@ select {
 #add a {
   background: linear-gradient(to bottom, rgb(199, 63, 63), rgb(94, 33, 33));
 }
+
+#flights {
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+th {
+  border: none;
+  padding: 5px;
+  text-align: start;
+  background-color: rgb(125, 141, 147);
+}
+
+#flights tr:nth-child(odd) {
+  background-color: rgb(181, 199, 207);
+}
+
+#flights tr:nth-child(even) {
+  background-color: rgb(207, 230, 239);
+}
+
+td {
+  border: none;
+  padding: 5px;
+}

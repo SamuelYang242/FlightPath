@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'fs';
 let lines = [];
 let newLines = [];
 
-readFile("./src/public/data/airlines.csv", "utf8", (err, data) => {
+readFile("./src/public/data/airports.csv", "utf8", (err, data) => {
   if (err) console.log(err.message);
 
   // Split by line
@@ -14,16 +14,16 @@ readFile("./src/public/data/airlines.csv", "utf8", (err, data) => {
   })
 
   // Filter out unneeded data
-  newLines = newLines.filter((line) => {
-    if (line[1] === '' || line[2] === '' || line[5] === 'N') {
-      return false;
-    }
-    return true;
-  })
+  // newLines = newLines.filter((line) => {
+  //   if (line[1] === '' || line[2] === '' || line[5] === 'N') {
+  //     return false;
+  //   }
+  //   return true;
+  // })
 
   //Only keep needed fields
   newLines = newLines.map((line) => {
-    return [line[0], line[1], line[2]];
+    return [line[0], line[3], line[4], line[5], line[6]];
   })
 
   //Write to file

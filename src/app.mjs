@@ -2,6 +2,7 @@ import './config.mjs';
 import './db.mjs';
 import * as auth from './auth.mjs';
 import * as util from './utils.mjs';
+import apiRoutes from './apiRoutes.mjs';
 
 import express from 'express';
 import session from 'express-session';
@@ -26,6 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+app.use('/api', apiRoutes);
 
 const Flight = mongoose.model('Flight');
 const User = mongoose.model('User');
@@ -151,5 +153,6 @@ app.post('/add', async (req, res) => {
     res.render('add', { user: req.user, error: err.message });
   }
 })
+
 
 app.listen(process.env.PORT || 3000);

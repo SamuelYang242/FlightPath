@@ -69,6 +69,7 @@ function getAirport(input) {
 export {
   checkFlightErrors,
   getAirline,
-  getNumber
+  getNumber,
+  getAirport
 }
 

@@ -4,11 +4,23 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-const JFK = [40.6446, -73.7797];
-const LHR = [51.4680, -0.4551];
+const response = await fetch('/api/user');
+const user = await response.json();
 
-L.marker([40.6446, -73.7797]).bindPopup('<p>JFK</p>').addTo(map);
-L.marker([51.4680, -0.4551]).bindPopup('<p>LHR</p>').addTo(map);
+async function displayFlight(flight) {
+  const originResponse = await fetch(`/api/${flight.departureAirport}`);
+  const origin = await originResponse.json();
+  const destinationResponse = await fetch(`/api/${flight.arrivalAirport}`);
+  const destination = await destinationResponse.json();
 
-const points = [JFK, LHR]
-L.polyline(points, { color: 'black' }).addTo(map); 
+  const originLtLg = [origin.Latitude, origin.Longitude];
+  const destinationLtLg = [destination.Latitude, destination.Longitude];
+
+  L.marker(originLtLg).bindPopup(`<p>${origin.IATA}</p>`).addTo(map);
+  L.marker(destinationLtLg).bindPopup(`<p>${destination.IATA}</p>`).addTo(map);
+  L.polyline([originLtLg, destinationLtLg], { color: 'black', weight: '1' }).addTo(map);
+}
+
+user.flights.forEach((flight) => {
+  displayFlight(flight);
+})

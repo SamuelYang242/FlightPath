@@ -26,13 +26,15 @@ Results visible at: https://organic-sniffle-wr5x9x4gxv6w2gpwr-3000.app.github.de
 
 Special Instructions for Form 2
 ---
-Fill in all fields (one of hours or minutes can be left blank).
+From the account page, press the add button to add a flight to your account. 
+
+Fill in all fields (one of hours or minutes can be left blank for 0).
 - Flight: 2 or 3 letter airline code, followed by numbers (e.g. UAL112 or UA112)
 - Aircraft type: Select from dropdown
 - Date: Select a date from the past
 - Origin: 3 or 4 letter airport code (e.g. KJFK or JFK)
 - Destination: same as origin
-- Duration: Enter hours and minutes. One of these can be left blank for 0 (haven't done much testing on this it might break no promises here)
+- Duration: Enter hours and minutes. One of these can be left blank for 0
 
 The new flight will show on the account page, along with a display on the map corresponding to your new flight. 
 

@@ -309,15 +309,15 @@ th {
   background-color: rgb(125, 141, 147);
 }
 
+td {
+  border: none;
+  padding: 5px;
+}
+
 #flights tr:nth-child(odd) {
   background-color: rgb(181, 199, 207);
 }
 
 #flights tr:nth-child(even) {
   background-color: rgb(207, 230, 239);
-}
-
-td {
-  border: none;
-  padding: 5px;
 }

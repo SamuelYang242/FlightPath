@@ -32,6 +32,11 @@
         <a class="button-prim" href="/account">Cancel</a>
         <button class="button-prim" type="submit">Add</button>
       </form>
+      {{#if error}}
+        <div>
+          <p class="error">{{error}}</p>
+        </div>
+      {{/if}}
     </div>
   </div>
 </body>

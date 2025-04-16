@@ -118,27 +118,38 @@ app.get('/account', (req, res) => {
 });
 
 app.get('/add', (req, res) => {
-  // if (req.isUnauthenticated()) {
-  //   res.redirect('/login');
-  // }
-  // else {
-  res.render('add', ({ user: req.user }));
-  // }
+  if (req.isUnauthenticated()) {
+    res.redirect('/login');
+  }
+  else {
+    res.render('add', ({ user: req.user }));
+  }
 })
 
 app.post('/add', async (req, res) => {
-  const user = await User.findOne({ username: "testuser" })
-  const error = util.checkFlightErrors(req.body);
-  const newFlight = new Flight({
-    airline: req.body.flight,
-    flightNumber: req.body.flight,
-    departureAirport: req.body.departure,
-    arrivalAirport: req.body.arrival,
-    duration: Number(req.body.hours) * 60 + Number(req.body.minutes),
-    date: Date(req.body.date),
-    type: req.body.type
-  });
-  res.redirect('add');
+  try {
+    util.checkFlightErrors(req.body);
+    const airline = util.getAirline(req.body.flight.toUpperCase());
+    const flightNumber = util.getNumber(req.body.flight.toUpperCase(), airline);
+    const newFlight = new Flight({
+      airline: airline.ICAO,
+      flightNumber: flightNumber,
+      departureAirport: req.body.origin.toUpperCase(),
+      arrivalAirport: req.body.destination.toUpperCase(),
+      duration: Number(req.body.hours * 60) + Number(req.body.minutes),
+      date: new Date(req.body.date),
+      type: req.body.type,
+      user: req.user._id
+    });
+    await newFlight.save();
+    const user = await User.findById(req.user._id);
+    user.flights.push(newFlight._id);
+    await user.save();
+    res.redirect('/account');
+  }
+  catch (err) {
+    res.render('add', { user: req.user, error: err.message });
+  }
 })
 
 app.listen(process.env.PORT || 3000);

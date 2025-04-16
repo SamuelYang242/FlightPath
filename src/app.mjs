@@ -133,12 +133,14 @@ app.post('/add', async (req, res) => {
     util.checkFlightErrors(req.body);
     const airline = util.getAirline(req.body.flight.toUpperCase());
     const flightNumber = util.getNumber(req.body.flight.toUpperCase(), airline);
+    const hours = req.body.hours || 0;
+    const minutes = req.body.minutes || 0;
     const newFlight = new Flight({
       airline: airline.ICAO,
       flightNumber: flightNumber,
       departureAirport: req.body.origin.toUpperCase(),
       arrivalAirport: req.body.destination.toUpperCase(),
-      duration: Number(req.body.hours * 60) + Number(req.body.minutes),
+      duration: Number(hours * 60) + Number(minutes),
       date: new Date(req.body.date),
       type: req.body.type,
       user: req.user._id

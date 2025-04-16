@@ -16,6 +16,10 @@ body {
   overflow-x: hidden;
 }
 
+button:hover {
+  cursor: grab;
+}
+
 #header {
   display: flex;
   flex-direction: row;
@@ -54,10 +58,6 @@ body {
   align-items: center;
 }
 
-#home:hover {
-  cursor: grab;
-}
-
 #logo {
   height: 40px;
   margin-right: 10px;
@@ -93,10 +93,6 @@ input:not([type='submit']) {
   border: none;
 }
 
-#search-container button:hover {
-  cursor: grab;
-}
-
 #account {
   display: flex;
   flex-direction: row;
@@ -107,7 +103,7 @@ input:not([type='submit']) {
 }
 
 #account a,
-button {
+#account button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,7 +120,6 @@ button {
 #account a:hover,
 #account button:hover {
   background: rgb(0, 0, 98);
-  cursor: grab;
 }
 
 .center-container {
@@ -170,10 +165,6 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 15px;
-}
-
-.button-prim:hover {
-  cursor: grab;
 }
 
 .login-button-sec {
@@ -235,10 +226,6 @@ p {
 #map {
   height: 500px;
   width: 90%;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
   margin: auto;
   border-bottom-style: solid;
   border-bottom-color: rgb(0, 29, 133);
@@ -260,11 +247,13 @@ p {
   justify-items: right;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 40px);
+  grid-template-rows: repeat(3, 40px);
   row-gap: 20px;
 }
 
-#add * {
+#add div {
+  position: relative;
+  right: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -275,4 +264,33 @@ p {
   padding-left: 10px;
   margin-left: 15px;
   width: 250px;
+}
+
+select {
+  font-size: 18px;
+  border-radius: 15px/50%;
+  height: 32px;
+  padding-left: 10px;
+  margin-left: 15px;
+  width: 262px;
+  border: none;
+  outline: none;
+}
+
+#add input[type='number'] {
+  width: 50px;
+}
+
+#add button,
+#add a {
+  text-align: center;
+  font-size: 25px;
+  margin: auto;
+  width: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#add a {
+  background: linear-gradient(to bottom, rgb(199, 63, 63), rgb(94, 33, 33));
 }

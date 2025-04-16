@@ -1,6 +1,7 @@
 import './config.mjs';
 import './db.mjs';
 import * as auth from './auth.mjs';
+import * as util from './utils.mjs';
 
 import express from 'express';
 import session from 'express-session';
@@ -26,10 +27,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-const User = mongoose.model('User');
 const Flight = mongoose.model('Flight');
+const User = mongoose.model('User');
 
-// This is just here to handle the expected vs unexpected errors in registration
+// This is just here to handle the expected vs unexpected errors
 const displayErrors = ['*Please enter a username and password', '*Password must be 8 characters or more', '*Username already exists'];
 
 
@@ -84,7 +85,6 @@ app.get("/register", (req, res) => {
   }
 });
 
-
 app.post("/register", async (req, res, next) => {
   const username = sanitize(req.body.username);
   try {
@@ -109,21 +109,36 @@ app.post("/register", async (req, res, next) => {
 });
 
 app.get('/account', (req, res) => {
-  // if (req.isUnauthenticated()) {
-  // res.redirect('/login');
-  // }
-  // else {
-  res.render('account', ({ user: req.user }));
-  // }
+  if (req.isUnauthenticated()) {
+    res.redirect('/login');
+  }
+  else {
+    res.render('account', ({ user: req.user }));
+  }
 });
 
 app.get('/add', (req, res) => {
   // if (req.isUnauthenticated()) {
-  // res.redirect('/login');
+  //   res.redirect('/login');
   // }
   // else {
   res.render('add', ({ user: req.user }));
   // }
+})
+
+app.post('/add', async (req, res) => {
+  const user = await User.findOne({ username: "testuser" })
+  const error = util.checkFlightErrors(req.body);
+  const newFlight = new Flight({
+    airline: req.body.flight,
+    flightNumber: req.body.flight,
+    departureAirport: req.body.departure,
+    arrivalAirport: req.body.arrival,
+    duration: Number(req.body.hours) * 60 + Number(req.body.minutes),
+    date: Date(req.body.date),
+    type: req.body.type
+  });
+  res.redirect('add');
 })
 
 app.listen(process.env.PORT || 3000);

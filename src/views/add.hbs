@@ -4,25 +4,33 @@
       <h2>Add Flight</h2>
       <form method="POST" id="add">
         <div>
-          <label>Flight:</label> <input type="text" placeholder="Flight Number">
+          <label for="flight">Flight:</label> <input name="flight" type="text" placeholder="e.g. UAL146 / UA146">
         </div>
         <div>
-          <label>Duration:</label> <input type="text" placeholder="Flight Number">
+          <label for="origin">Origin:</label> <input name="origin" type="text" placeholder="e.g. KEWR / EWR">
         </div>
         <div>
-          <label>Origin:</label> <input type="text" placeholder="Flight Number">
+          <label for="type">Aircraft type:</label>
+          <select name="type">
+            <option value="">--Please choose an option--</option>
+            <option value="A320">Airbus a320 (A320)</option>
+            <option value="B738">Boeing 737-800 (B738)</option>
+            <option value="B77W">Boeing 777-300ER (B77W) </option>
+          </select>
         </div>
         <div>
-          <label>Date</label> <input type="date">
+          <label for="destination">Destination</label> <input name="destination" type="text"
+            placeholder="e.g. EGLL / LHR">
         </div>
         <div>
-          <label>Destination</label> <input type="text" placeholder="Flight Number">
+          <label for="date">Date</label> <input name="date" type="date">
         </div>
         <div>
-          <label>Aircraft type:</label> <input type="text" placeholder="Flight Number">
+          <label for="duration">Duration:</label> <input name="hours" type="number" placeholder="HH"> <input
+            name="minutes" type="number" placeholder="MM">
         </div>
-        <a href="/account">Cancel</a>
-        <button type="submit">Add</button>
+        <a class="button-prim" href="/account">Cancel</a>
+        <button class="button-prim" type="submit">Add</button>
       </form>
     </div>
   </div>

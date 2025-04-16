@@ -22,3 +22,12 @@ Any code taken from the above-mentioned or other sources are directly acknowledg
 
 ### Others:
 Website name is generated using chatGPT because I am not creative enough. I sure hope it's not copyrighted somewhere.
+
+[Airline data](./src/public/data/airlines.json) adapted from : 
+https://github.com/elmoallistair/datasets/blob/main/airlines.csv
+
+[Airport data](./src/public/data/airports.json) adapted from : 
+https://github.com/elmoallistair/datasets/blob/main/airports.csv
+
+Used https://csvjson.com/csv2json to convert from csv to json, but data was cleaned and filtered myself using a [javascript program](./src/public/data/parser.mjs)
+- Note: the program won't work anymore because the original CSV files have been deleted, but the program is there as a record and in case troubleshooting is needed

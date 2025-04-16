@@ -118,5 +118,4 @@ An example Flight
 ## [Link to Initial Main Project File](./src/app.mjs) 
 
 ## Annotations / References Used
-* [Leaflet API](https://leafletjs.com)
-* [Aviationweather.gov API](https://aviationweather.gov/data/api/#/)
+* All acknowledgements are in [acknowledgements](./Acknowledgements.md)

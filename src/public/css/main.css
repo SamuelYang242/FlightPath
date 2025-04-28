@@ -220,7 +220,6 @@ p {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
 #map {
@@ -298,7 +297,6 @@ select {
 #flights {
   font-size: 20px;
   width: 100%;
-  box-sizing: border-box;
   border-collapse: collapse;
 }
 

@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 
-const airlineData = JSON.parse(readFileSync("./src/public/data/airlines.json"), 'utf-8');
-const airportData = JSON.parse(readFileSync("./src/public/data/airports.json"), 'utf-8');
+const airlineData = JSON.parse(readFileSync("./src/data/airlines.json"), 'utf-8');
+const airportData = JSON.parse(readFileSync("./src/data/airports.json"), 'utf-8');
 
 function checkFlightErrors(info) {
   // Ensure all values are filled out except hours and minutes
@@ -49,6 +49,9 @@ function checkFlightErrors(info) {
 function getAirline(flight) {
   const IATA = flight.slice(0, 2);
   const ICAO = flight.slice(0, 3);
+  if (ICAO === "\\N") {
+    return null;
+  }
   const airline = airlineData.find((airline) => ICAO === airline.ICAO);
   return airline || airlineData.find((airline) => IATA === airline.IATA);
 }
@@ -63,6 +66,9 @@ function getNumber(flight, airline) {
 }
 
 function getAirport(input) {
+  if (input.IATA === "\\N") {
+    return null;
+  }
   return airportData.find((airport) => input === airport.IATA || input === airport.ICAO);
 }
 

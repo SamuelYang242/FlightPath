@@ -32,7 +32,7 @@ async function addFlight(flight, origin, destination) {
 }
 
 user.flights.forEach(async (flight) => {
-  // Pass origin and destination information to minimize API calls
+  // Pass origin and destination information as arguments to reduce duplicate API calls
   const originResponse = await fetch(`/api/${flight.departureAirport}`);
   const origin = await originResponse.json();
   const destinationResponse = await fetch(`/api/${flight.arrivalAirport}`);

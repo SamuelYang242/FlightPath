@@ -27,6 +27,7 @@ const register = async (username, password) => {
   const newUser = new User({
     username: username,
     password: hash,
+    flightTime: 0,
   });
 
   await newUser.save();

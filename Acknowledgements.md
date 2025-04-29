@@ -19,6 +19,7 @@ The majority of authentication code, written in [auth.mjs](./src/auth.mjs) and [
 - [background images in css](https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-SamuelYang24/blob/c6fceeeac84acd2091edc6b7f8c029d7d9ce9da3/src/public/css/main.css#L5) are learned from https://www.w3schools.com/html/html_images_background.asp 
 - All code using leaflet library in [testing](./testing) and [scripts.mjs](./src/public/js/scripts.mjs)  are from https://leafletjs.com/examples/quick-start/ and https://leafletjs.com/reference.html#map-example
 - All code using chartjs module in [testing](./testing) and [scripts.mjs](./src/public/js/scripts.mjs) are from https://www.chartjs.org/docs/latest/
+- [Reload from client-sized javascript]() from https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
 
 
 ### Others:

@@ -115,7 +115,7 @@ app.get('/account', (req, res) => {
     res.redirect('/login');
   }
   else {
-    const flightStr = `${Math.floor(req.user.flightTime / 60)}:${String(req.user.flightTime % 60).padStart(2, '0')}`;
+    const flightStr = `${Math.floor(req.user.flightTime / 60)}H ${String(req.user.flightTime % 60).padStart(2, '0')}M`;
     res.render('account', ({ user: req.user, flightTime: flightStr }));
   }
 });

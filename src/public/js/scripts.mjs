@@ -100,9 +100,34 @@ async function displayFlight(origin, destination) {
   L.polyline([originLtLg, destinationLtLg], { color: 'black', weight: '1' }).addTo(map);
 }
 
+async function deleteFlight(evt) {
+  const row = evt.target.parentElement.parentElement;
+  const flightId = row.getAttribute('id');
+  try {
+    const res = await fetch(`/api/delete/${flightId}`,
+      {
+        method: 'DELETE'
+      });
+    const json = await res.json();
+
+    if (json.err) {
+      console.log(json.err);
+    }
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+    window.location.reload();
+
+  }
+  catch (err) {
+    console.log(err);
+  }
+}
+
+
 async function addFlight(flight, origin, destination) {
   const container = document.createElement('tr');
   container.classList.add("flight-container");
+  container.setAttribute('id', flight._id);
   container.innerHTML = `
     <td>${flight.airline + flight.flightNumber}</td>
     <td>${origin.IATA === "N/A" ? "..." : origin.IATA}/${origin.ICAO}</td>
@@ -111,6 +136,10 @@ async function addFlight(flight, origin, destination) {
     <td>${Math.floor(flight.duration / 60)}:${String(flight.duration % 60).padStart(2, '0')}</td>
     <td>${flight.type}</td>
   `;
+  const deleteBtn = document.createElement('td');
+  deleteBtn.innerHTML = '<i class="material-icons">delete</i>';
+  deleteBtn.addEventListener("click", deleteFlight);
+  container.appendChild(deleteBtn);
   document.getElementById("flights").appendChild(container);
 }
 

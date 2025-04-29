@@ -1,13 +1,15 @@
 const myChart = document.getElementById('myChart');
 
+const data = {
+  labels: [1, 2, 3, 4, 5],
+  datasets: [{
+    data: [1, 2, 3, 4, 5]
+  }]
+};
+
 const config = {
   type: "pie",
-  data: {
-    labels: [1, 2, 3, 4, 5],
-    datasets: [{
-      data: [1, 2, 3, 4, 5]
-    }]
-  },
+  data: data,
   options: {
     plugins: {
       title: {

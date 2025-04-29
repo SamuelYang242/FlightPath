@@ -319,3 +319,24 @@ td {
 #flights tr:nth-child(even) {
   background-color: rgb(207, 230, 239);
 }
+
+#summary-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#summary-container * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#summary-container h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 65px;
+}

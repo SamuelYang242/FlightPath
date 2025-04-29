@@ -1,13 +1,97 @@
+const response = await fetch('/api/user');
+const user = await response.json();
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------- GENERATE CHARTS ----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+let airlineObj = {};
+let aircraftObj = {};
+
+user.flights.forEach((flight) => {
+  if (!airlineObj[flight.airline]) {
+    airlineObj[flight.airline] = flight.duration;
+  }
+  else {
+    airlineObj[flight.airline] += flight.duration;
+  }
+  if (!aircraftObj[flight.type]) {
+    aircraftObj[flight.type] = flight.duration;
+  }
+  else {
+    aircraftObj[flight.type] += flight.duration;
+  }
+})
+
+let airlineData = {
+  labels: Object.keys(airlineObj),
+  datasets: [{
+    label: "Minutes",
+    data: Object.values(airlineObj)
+  }]
+};
+
+let aircraftData = {
+  labels: Object.keys(aircraftObj),
+  datasets: [{
+    label: "Minutes",
+    data: Object.values(aircraftObj)
+  }]
+};
+
+const airlineConfig = {
+  type: "pie",
+  data: airlineData,
+  options: {
+    plugins: {
+      title: {
+        text: "Airlines",
+        display: true,
+        font: {
+          size: 30,
+        },
+        color: 'black'
+      },
+      legend: {
+        display: false,
+      }
+    }
+  }
+}
+
+const aircraftConfig = {
+  type: "pie",
+  data: aircraftData,
+  options: {
+    plugins: {
+      title: {
+        text: "Aircraft Types",
+        display: true,
+        font: {
+          size: 30,
+        },
+        color: 'black'
+      },
+      legend: {
+        display: false,
+      }
+    }
+  }
+}
+
+new Chart(document.getElementById("airline-chart"), airlineConfig);
+new Chart(document.getElementById("aircraft-chart"), aircraftConfig);
+
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------- GENERATE FLIGHT DISPLAY AND DATA -------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+
 const map = L.map('map').setView([30, 0], 2);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-const response = await fetch('/api/user');
-const user = await response.json();
-
-async function displayFlight(flight, origin, destination) {
+async function displayFlight(origin, destination) {
   const originLtLg = [origin.Latitude, origin.Longitude];
   const destinationLtLg = [destination.Latitude, destination.Longitude];
 
@@ -18,12 +102,11 @@ async function displayFlight(flight, origin, destination) {
 
 async function addFlight(flight, origin, destination) {
   const container = document.createElement('tr');
-  console.log(typeof (flight.date));
   container.classList.add("flight-container");
   container.innerHTML = `
     <td>${flight.airline + flight.flightNumber}</td>
-    <td>${origin.IATA}/${origin.ICAO}</td>
-    <td>${destination.IATA}/${destination.ICAO}</td>
+    <td>${origin.IATA === "N/A" ? "..." : origin.IATA}/${origin.ICAO}</td>
+    <td>${destination.IATA === "N/A" ? "..." : destination.IATA}/${destination.ICAO}</td>
     <td>${new Date(flight.date).toISOString().slice(0, 10)}</td>
     <td>${Math.floor(flight.duration / 60)}:${String(flight.duration % 60).padStart(2, '0')}</td>
     <td>${flight.type}</td>
@@ -38,6 +121,6 @@ user.flights.forEach(async (flight) => {
   const destinationResponse = await fetch(`/api/${flight.arrivalAirport}`);
   const destination = await destinationResponse.json();
 
-  displayFlight(flight, origin, destination);
+  displayFlight(origin, destination);
   addFlight(flight, origin, destination);
 })

@@ -766,7 +766,7 @@
   },
   {
     "Name": "Air Salone",
-    "IATA": 20,
+    "IATA": "20",
     "ICAO": "RNE"
   },
   {
@@ -3121,13 +3121,13 @@
   },
   {
     "Name": "Tyrolean Airways",
-    "IATA": "\\N",
+    "IATA": "N/A",
     "ICAO": "TYR"
   },
   {
     "Name": "Maldivian Air Taxi",
     "IATA": "8Q",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Sky Express",
@@ -3142,7 +3142,7 @@
   {
     "Name": "Air Mandalay",
     "IATA": "6T",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Air Busan",
@@ -3167,17 +3167,17 @@
   {
     "Name": "EasyJet (DS)",
     "IATA": "DS",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Star Peru (2I)",
     "IATA": "2I",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Carnival Air Lines",
     "IATA": "KW",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "United Airways",
@@ -3207,7 +3207,7 @@
   {
     "Name": "Gomelavia",
     "IATA": "YD",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Red Wings",
@@ -3216,8 +3216,8 @@
   },
   {
     "Name": "TUIfly (X3)",
-    "IATA": 11,
-    "ICAO": "\\N"
+    "IATA": "11",
+    "ICAO": "N/A"
   },
   {
     "Name": "Felix Airways",
@@ -3237,12 +3237,12 @@
   {
     "Name": "Tajik Air",
     "IATA": "7J",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Air Mozambique",
     "IATA": "TM",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "ELK Airways",
@@ -3267,12 +3267,12 @@
   {
     "Name": "Zest Air",
     "IATA": "Z2",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Yangon Airways",
     "IATA": "HK",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Eastar Jet",
@@ -3287,7 +3287,7 @@
   {
     "Name": "Air Arabia Maroc",
     "IATA": "3O",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Baltic Air lines",
@@ -3312,7 +3312,7 @@
   {
     "Name": "Air Comet Chile",
     "IATA": "3I",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Line Blue",
@@ -3322,7 +3322,7 @@
   {
     "Name": "Salzburg arrows",
     "IATA": "SZ",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Texas Wings",
@@ -3337,7 +3337,7 @@
   {
     "Name": "Zz",
     "IATA": "ZZ",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Atifly",
@@ -3346,13 +3346,13 @@
   },
   {
     "Name": "Ciao Air",
-    "IATA": 99,
-    "ICAO": "\\N"
+    "IATA": "99",
+    "ICAO": "N/A"
   },
   {
     "Name": "Pal airlines",
     "IATA": "5P",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "CanXpress",
@@ -3362,7 +3362,7 @@
   {
     "Name": "Danube Wings (V5)",
     "IATA": "V5",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Sharp Airlines",
@@ -3377,7 +3377,7 @@
   {
     "Name": "Click (Mexicana)",
     "IATA": "QA",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "World Experience Airline",
@@ -3387,17 +3387,17 @@
   {
     "Name": "ALAK",
     "IATA": "J4",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Air Choice One",
     "IATA": "3E",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "China United",
     "IATA": "KN",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Locair",
@@ -3407,7 +3407,7 @@
   {
     "Name": "Safi Airlines",
     "IATA": "4Q",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "SeaPort Airlines",
@@ -3417,12 +3417,12 @@
   {
     "Name": "Salmon Air",
     "IATA": "S6",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Bobb Air Freight",
-    "IATA": 1,
-    "ICAO": "\\N"
+    "IATA": "01",
+    "ICAO": "N/A"
   },
   {
     "Name": "Star1 Airlines",
@@ -3432,12 +3432,12 @@
   {
     "Name": "Pelita",
     "IATA": "6D",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Alaska Seaplane Service",
     "IATA": "J5",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "MexicanaLink",
@@ -3452,22 +3452,22 @@
   {
     "Name": "TACA Peru",
     "IATA": "T0",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Pan Am World Airways Dominicana",
     "IATA": "7Q",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Primera Air",
     "IATA": "PF",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Air Antilles Express",
     "IATA": "3S",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Regional Paraguaya",
@@ -3477,42 +3477,42 @@
   {
     "Name": "VIP Ecuador",
     "IATA": "V6",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Peruvian Airlines",
     "IATA": "P9",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Polar Airlines",
     "IATA": "ЯП",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Catovair",
     "IATA": "OC",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Halcyonair",
     "IATA": "7Z",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Business Aviation",
     "IATA": "4P",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Compagnie Africaine d\\\\'Aviation",
     "IATA": "E9",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Zambia Skyways",
     "IATA": "K8",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "AlMasria Universal Airlines",
@@ -3522,7 +3522,7 @@
   {
     "Name": "SmartLynx Airlines",
     "IATA": "6Y",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "KoralBlue Airlines",
@@ -3552,7 +3552,7 @@
   {
     "Name": "Dana Air",
     "IATA": "DA",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "STP Airways",
@@ -3562,7 +3562,7 @@
   {
     "Name": "Med Airways",
     "IATA": "7Y",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Skyjet Airlines",
@@ -3572,7 +3572,7 @@
   {
     "Name": "Air Volga",
     "IATA": "G6",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Royal Falcon",
@@ -3587,7 +3587,7 @@
   {
     "Name": "Athens Airways",
     "IATA": "ZF",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Viking Hellas",
@@ -3597,17 +3597,17 @@
   {
     "Name": "Starline.kz",
     "IATA": "DZ",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Lugansk Airlines",
     "IATA": "L7",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Gryphon Airlines",
     "IATA": "6P",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Gadair European Airlines",
@@ -3642,7 +3642,7 @@
   {
     "Name": "NordStar Airlines",
     "IATA": "Y7",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Joy Air",
@@ -3652,52 +3652,52 @@
   {
     "Name": "Air India Regional",
     "IATA": "CD",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "MDLR Airlines",
     "IATA": "9H",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Maldivian",
     "IATA": "Q2",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Xpressair",
     "IATA": "XN",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Strategic Airlines",
     "IATA": "VC",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Al-Naser Airlines",
     "IATA": "NA",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Fuji Dream Airlines",
     "IATA": "JH",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "SGA Airlines",
     "IATA": "5E",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Air2there",
     "IATA": "F8",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Avianova (Russia)",
     "IATA": "AO",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Parmiss Airlines (IPV)",
@@ -3732,12 +3732,12 @@
   {
     "Name": "Wilderness Air",
     "IATA": ";;",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Whitaker Air",
     "IATA": "^^",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "PanAm World Airways",
@@ -3770,8 +3770,8 @@
     "ICAO": "WAU"
   },
   {
-    "Name": 88,
-    "IATA": 47,
+    "Name": "88",
+    "IATA": "47",
     "ICAO": "VVN"
   },
   {
@@ -3782,15 +3782,15 @@
   {
     "Name": "Cambodia Angkor Air (K6)",
     "IATA": "K6",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Royal European Airlines",
-    "IATA": 69,
-    "ICAO": "\\N"
+    "IATA": "69",
+    "ICAO": "N/A"
   },
   {
-    "Name": "Tom\\\\'s & co airliners",
+    "Name": "Tom's & co airliners",
     "IATA": "&T",
     "ICAO": "T&O"
   },
@@ -3812,12 +3812,12 @@
   {
     "Name": "Genesis",
     "IATA": "GK",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Congo Express",
     "IATA": "XZ",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Fly Dubai",
@@ -3842,12 +3842,12 @@
   {
     "Name": "UTair-Express",
     "IATA": "UR",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Huaxia",
     "IATA": "G5",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Zabaykalskii Airlines",
@@ -3862,17 +3862,17 @@
   {
     "Name": "N1",
     "IATA": "N1",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Airlink (SAA)",
     "IATA": "4Z",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "JobAir",
     "IATA": "3B",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Black Stallion Airways",
@@ -3897,7 +3897,7 @@
   {
     "Name": "China SSS",
     "IATA": "9C",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Air Mekong",
@@ -3907,7 +3907,7 @@
   {
     "Name": "Harbour Air (Priv)",
     "IATA": "H3",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Air Hamburg (AHO)",
@@ -3927,17 +3927,17 @@
   {
     "Name": "Yeti Airways",
     "IATA": "YT",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Yellowstone Club Private Shuttle",
     "IATA": "Y1",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Caucasus Airlines",
     "IATA": "NS",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Serbian Airlines",
@@ -3947,7 +3947,7 @@
   {
     "Name": "Windward Islands Airways",
     "IATA": "WM",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "TransHolding System",
@@ -3982,7 +3982,7 @@
   {
     "Name": "KMV",
     "IATA": "МИ",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Himalayan Airlines",
@@ -3997,7 +3997,7 @@
   {
     "Name": "Sunwing",
     "IATA": "WG",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Japan Regio",
@@ -4007,22 +4007,22 @@
   {
     "Name": "Norte Lineas Aereas",
     "IATA": "N0",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Austral Brasil",
     "IATA": "W7",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "PEGASUS AIRLINES-",
     "IATA": "H9",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Camair-co",
     "IATA": "QC",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Sky Regional",
@@ -4047,7 +4047,7 @@
   {
     "Name": "Air Cargo Germany",
     "IATA": "6U",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Mongolian International Air Lines",
@@ -4062,7 +4062,7 @@
   {
     "Name": "Papillon Grand Canyon Helicopters",
     "IATA": "HI",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Jusur airways",
@@ -4082,7 +4082,7 @@
   {
     "Name": "GNB Linhas Aereas",
     "IATA": "GN",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Usa Sky Cargo",
@@ -4097,22 +4097,22 @@
   {
     "Name": "REDjet",
     "IATA": "Z7",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Red Jet Andes",
     "IATA": "PT",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Red Jet Canada",
     "IATA": "QY",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Red Jet Mexico",
     "IATA": "4X",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Marusya Airways",
@@ -4147,7 +4147,7 @@
   {
     "Name": "BVI Airways",
     "IATA": "XV",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Salsa d\\\\'Haiti",
@@ -4157,16 +4157,16 @@
   {
     "Name": "Zambezi Airlines (ZMA)",
     "IATA": "ZJ",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Polet Airlines (Priv)",
     "IATA": "YQ",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "12 North",
-    "IATA": 12,
+    "IATA": "12",
     "ICAO": "N12"
   },
   {
@@ -4192,7 +4192,7 @@
   {
     "Name": "Alitalia Cityliner",
     "IATA": "CT",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Orchid Airlines",
@@ -4207,7 +4207,7 @@
   {
     "Name": "Skywest Australia",
     "IATA": "XR",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Nile Air",
@@ -4222,12 +4222,12 @@
   {
     "Name": "Fly 6ix",
     "IATA": "6I",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Starbow Airlines",
     "IATA": "S9",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Copenhagen Express",
@@ -4242,7 +4242,7 @@
   {
     "Name": "SENIC AIRLINES",
     "IATA": "YR",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Sky Wing Pacific",
@@ -4257,7 +4257,7 @@
   {
     "Name": "Peach Aviation",
     "IATA": "MM",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Aviabus",
@@ -4282,21 +4282,21 @@
   {
     "Name": "Aws express",
     "IATA": "B0",
-    "ICAO": 666
+    "ICAO": "666"
   },
   {
     "Name": "Southjet",
-    "IATA": 76,
+    "IATA": "76",
     "ICAO": "SJS"
   },
   {
     "Name": "Southjet connect",
-    "IATA": 77,
+    "IATA": "77",
     "ICAO": "ZCS"
   },
   {
     "Name": "Southjet cargo",
-    "IATA": 78,
+    "IATA": "78",
     "ICAO": "XAN"
   },
   {
@@ -4307,12 +4307,12 @@
   {
     "Name": "Interjet (ABC Aerolineas)",
     "IATA": "4O",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "AirOnix",
     "IATA": "OG",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Nordic Global Airlines",
@@ -4327,12 +4327,12 @@
   {
     "Name": "Hi Fly (5K)",
     "IATA": "5K",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "China Northwest Airlines (WH)",
     "IATA": "WH",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Zenith International Airline",
@@ -4347,12 +4347,12 @@
   {
     "Name": "Air Alps Aviation (A6)",
     "IATA": "A6",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Patriot Airways",
     "IATA": "P4",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Vision Airlines (V2)",
@@ -4362,7 +4362,7 @@
   {
     "Name": "BQB Lineas Aereas",
     "IATA": "5Q",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Yellowtail",
@@ -4382,12 +4382,12 @@
   {
     "Name": "Aero VIP (2D)",
     "IATA": "2D",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Yangon Airways Ltd.",
     "IATA": "YH",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "T.J. Air",
@@ -4397,17 +4397,17 @@
   {
     "Name": "SkyWork Airlines",
     "IATA": "SX",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Maastricht Airlines",
     "IATA": "W2",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Euro Jet",
-    "IATA": 24,
-    "ICAO": "\\N"
+    "IATA": "24",
+    "ICAO": "N/A"
   },
   {
     "Name": "SOCHI AIR CHATER",
@@ -4417,7 +4417,7 @@
   {
     "Name": "Denim Air",
     "IATA": "J7",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Malindo Air",
@@ -4427,12 +4427,12 @@
   {
     "Name": "Flightlink Tanzania",
     "IATA": "Z9",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "IzAvia",
     "IATA": "I8",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Maryland Air",
@@ -4442,7 +4442,7 @@
   {
     "Name": "Insel Air (7I/INC) (Priv)",
     "IATA": "7I",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "VivaColombia",
@@ -4457,7 +4457,7 @@
   {
     "Name": "MHS Aviation GmbH",
     "IATA": "M2",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Jettor Airlines",
@@ -4467,7 +4467,7 @@
   {
     "Name": "Thai Lion Air",
     "IATA": "SL",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "National Air Cargo",
@@ -4476,13 +4476,13 @@
   },
   {
     "Name": "Eastern Atlantic Virtual Airlines",
-    "IATA": 13,
+    "IATA": "13",
     "ICAO": "EAV"
   },
   {
     "Name": "Citilink Indonesia",
     "IATA": "QG",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Snowbird Airlines",
@@ -4502,7 +4502,7 @@
   {
     "Name": "Air Costa",
     "IATA": "LB",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "XPTO",
@@ -4512,7 +4512,7 @@
   {
     "Name": "Malawian Airlines",
     "IATA": "3W",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Avilu",
@@ -4636,7 +4636,7 @@
   },
   {
     "Name": "All Australia",
-    "IATA": 88,
+    "IATA": "88",
     "ICAO": "8K8"
   },
   {
@@ -4672,7 +4672,7 @@
   {
     "Name": "Island Express Air",
     "IATA": "1X",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "All Argentina Express",
@@ -4682,17 +4682,17 @@
   {
     "Name": "Thai Smile Airways",
     "IATA": "WE",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "International AirLink",
     "IATA": "I4",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Real Tonga",
     "IATA": "RT",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "All America AR",
@@ -4727,7 +4727,7 @@
   {
     "Name": "Eagle Atlantic Airlines",
     "IATA": "E2",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "All America CO",
@@ -4747,7 +4747,7 @@
   {
     "Name": "Air Kenya (Priv)",
     "IATA": "QP",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Via Conectia Airlines",
@@ -4777,7 +4777,7 @@
   {
     "Name": "OneJet",
     "IATA": "J1",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Global Airlines",
@@ -4797,7 +4797,7 @@
   {
     "Name": "Severstal Air Company",
     "IATA": "D2",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "REXAIR VIRTUEL",
@@ -4847,7 +4847,7 @@
   {
     "Name": "Аэросервис",
     "IATA": "АЯ",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Bassaka airlines",
@@ -4857,22 +4857,22 @@
   {
     "Name": "SkyBahamas Airlines",
     "IATA": "Q7",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "UVT Aero",
     "IATA": "UW",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Silver Airways (3M)",
     "IATA": "3M",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "ATA Airlines (Iran)",
     "IATA": "I3",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "VIA Líneas Aéreas",
@@ -4917,7 +4917,7 @@
   {
     "Name": "Nordica",
     "IATA": "EE",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "All America BOPY",
@@ -4927,12 +4927,12 @@
   {
     "Name": "Jetgo Australia",
     "IATA": "JG",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Air Carnival",
     "IATA": "2S",
-    "ICAO": "\\N"
+    "ICAO": "N/A"
   },
   {
     "Name": "Svyaz Rossiya",

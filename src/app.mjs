@@ -115,7 +115,8 @@ app.get('/account', (req, res) => {
     res.redirect('/login');
   }
   else {
-    res.render('account', ({ user: req.user }));
+    const flightStr = `${Math.floor(req.user.flightTime / 60)}:${String(req.user.flightTime % 60).padStart(2, '0')}`;
+    res.render('account', ({ user: req.user, flightTime: flightStr }));
   }
 });
 
@@ -131,12 +132,12 @@ app.get('/add', (req, res) => {
 app.post('/add', async (req, res) => {
   try {
     util.checkFlightErrors(req.body);
-    const airline = util.getAirline(req.body.flight.toUpperCase());
-    const flightNumber = util.getNumber(req.body.flight.toUpperCase(), airline);
+    const airline = util.getAirline(req.body.flight.toUpperCase().trim());
+    const flightNumber = util.getNumber(req.body.flight.toUpperCase().trim(), airline);
     const hours = req.body.hours || 0;
     const minutes = req.body.minutes || 0;
     const newFlight = new Flight({
-      airline: airline.ICAO,
+      airline: airline.ICAO === "N/A" ? airline.IATA : airline.ICAO,
       flightNumber: flightNumber,
       departureAirport: req.body.origin.toUpperCase(),
       arrivalAirport: req.body.destination.toUpperCase(),
@@ -148,6 +149,12 @@ app.post('/add', async (req, res) => {
     await newFlight.save();
     const user = await User.findById(req.user._id);
     user.flights.push(newFlight._id);
+    if (isNaN(user.flightTime)) {
+      user.flightTime = newFlight.duration;
+    }
+    else {
+      user.flightTime += newFlight.duration;
+    }
     await user.save();
     res.redirect('/account');
   }

@@ -18,6 +18,7 @@ The majority of authentication code, written in [auth.mjs](./src/auth.mjs) and [
 - [gradients in css](https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-SamuelYang24/blob/c6fceeeac84acd2091edc6b7f8c029d7d9ce9da3/src/public/css/main.css#L162) are learned from https://www.w3schools.com/css/css3_gradients.asp
 - [background images in css](https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-SamuelYang24/blob/c6fceeeac84acd2091edc6b7f8c029d7d9ce9da3/src/public/css/main.css#L5) are learned from https://www.w3schools.com/html/html_images_background.asp 
 - All code using leaflet library in [testing](./testing) and [scripts.mjs](./src/public/js/scripts.mjs)  are from https://leafletjs.com/examples/quick-start/ and https://leafletjs.com/reference.html#map-example
+- All code using chartjs module in [testing](./testing) and [scripts.mjs](./src/public/js/scripts.mjs) are from https://www.chartjs.org/docs/latest/
 
 
 ### Others:
@@ -29,5 +30,5 @@ https://github.com/elmoallistair/datasets/blob/main/airlines.csv
 [Airport data](./src/public/data/airports.json) adapted from : 
 https://github.com/elmoallistair/datasets/blob/main/airports.csv
 
-Used https://csvjson.com/csv2json to convert from csv to json, but data was cleaned and filtered myself using a [javascript program](./src/public/data/parser.mjs)
+I used https://csvjson.com/csv2json to convert from csv to json, but data was cleaned and filtered myself using a [javascript program](./src/public/data/parser.mjs)
 - Note: the program won't work anymore because the original CSV files have been deleted, but the program is there as a record and in case troubleshooting is needed

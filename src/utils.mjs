@@ -49,7 +49,7 @@ function checkFlightErrors(info) {
 function getAirline(flight) {
   const IATA = flight.slice(0, 2);
   const ICAO = flight.slice(0, 3);
-  if (ICAO === "\\N") {
+  if (ICAO === "N/A") {
     return null;
   }
   const airline = airlineData.find((airline) => ICAO === airline.ICAO);
@@ -66,7 +66,7 @@ function getNumber(flight, airline) {
 }
 
 function getAirport(input) {
-  if (input.IATA === "\\N") {
+  if (input === "N/A") {
     return null;
   }
   return airportData.find((airport) => input === airport.IATA || input === airport.ICAO);

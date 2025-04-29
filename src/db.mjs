@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   flights: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Flight' }],
-  flight_time: { type: Number },
+  flightTime: { type: Number },
   favoriteAirports: [{ type: String }]
 });
 

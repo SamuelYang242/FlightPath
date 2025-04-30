@@ -23,7 +23,9 @@ URL for form 1 (from previous milestone)
 
 Special Instructions for Form 1
 ---
-(TODO: if your app requires special instructions to use or if your app requires authentication, add information here; otherwise, leave blank)
+Login using the provided credentials (username: username1234; password: password1234), or create your own account by pressing the register button. 
+
+You will be taken to a pre-existing account page if you use the provided user, or an empty account page if you created a new one. 
 
 URL for form 2 (for current milestone)
 ---
@@ -31,7 +33,9 @@ URL for form 2 (for current milestone)
 
 Special Instructions for Form 2
 ---
-(TODO: if your app requires special instructions to use or if your app requires authentication, add information here; otherwise, leave blank)
+Under your account page (note that you must be signed in to access this, and is accessible on clicking the logo or your username in the header banner), scroll down and press the add a flight button. Then, enter the details required. Please ensure flight information, as well as airport information are accurate, as the website will not allow you to input invalid information. Examples are provided in the form. 
+
+After pressing the add button, this new flight will show up in your account dashboard and on the map, and the visuals depicting your profile's data will be updated
 
 URL for form 3 (from previous milestone) 
 ---
@@ -39,7 +43,7 @@ URL for form 3 (from previous milestone)
 
 Special Instructions for Form 3
 ---
-(TODO: if your app requires special instructions to use or if your app requires authentication, add information here; otherwise, leave blank)
+In the header banner of the website, enter an airport's name to be redirected to a page that shows you the weather information for the airport you have inputted. Note again, the airport code must be correct or you will be shown an error page. 
 
 First link to github line number(s) for constructor, HOF, etc.
 ---
@@ -51,23 +55,39 @@ Second link to github line number(s) for constructor, HOF, etc.
 
 Short description for links above
 ---
-(TODO: describe what each link above is, one line each... for example: myFunction is a hof that retrieves json from a url, map is used to transform the Array of Person objects into an Array of strings that represents names)
+The first link takes the user's array of flights and converts them each to HTML elements to add to the account dashboard, as well as adds them to the map
+
+The second link takes the API response from aviationweather.gov, specifically a severe weather string, and generates a regular human readable string based on which severe weather codes it contains.  
 
 Link to github line number(s) for schemas (db.js or models folder)
 ---
-(TODO: add link to schemas)
+[db.mjs](./src/db.mjs)
 
 Description of research topics above with points
 ---
-(TODO: add description of research topics here, including point values for each, one per line... for example: 2 points - applied and modified "Clean Blog" Bootstrap theme)
+4 points - Used leaflet and chartJS, client-side modules, to generate the visuals on the account dashboard. 
+
+4 points - Used passportjs, a server-side module, for stronger authentication protection. 
+
+3 points - Used aviationweather.gov API, an external API, to display weather information for different airports
 
 Links to github line number(s) for research topics described above (one link per line)
 ---
-(TODO: add link to github line number(s), one per line for research topics ... for example, if using auth/passport, link to auth.js or where bulk of auth code is)
+leaflet and chartJS: 
+- [account.hbs](./src/views/account.hbs)
+- [accountScripts.mjs](./src/public/js/accountScripts.mjs)
+- [testing folder](./testing/)
+
+passportjs: 
+- [auth.mjs](./src/auth.mjs)
+- [app.mjs](./src/app.mjs)
+
+aviationweather.gov API: 
+- [app.get('weather/:airport')]()
 
 Optional project notes 
 --- 
-(TODO: optionall add add any other information required for using/testing the final project)
+I did not have time to implement protections against API's being down. As a result, on the very rare chance this occurs, specifically the weather information functionality of this website may return an error message. 
 
 Attributions
 ---

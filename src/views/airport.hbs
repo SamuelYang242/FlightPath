@@ -1,0 +1,34 @@
+<body>
+  <div class="center-container">
+    <div id="weather-container">
+      <div id="weather-header">
+        <h1>{{weather.name}}</h1>
+        <span class="material-icons">star</span>
+      </div>
+      <div id="weather-grid">
+        <div>
+          <span>Wind</span>: {{weather.wspd}}
+          {{#if weather.wgst}}
+            - {{weather.wgst}}
+          {{/if}}
+          miles per hour
+        </div>
+        <div>
+          <span>Temperature</span>: {{weather.tempC}}C / {{weather.tempF}}F
+        </div>
+        <div>
+          <span>Visibility</span>: {{weather.visib}} km
+        </div>
+        <div>
+          <span>Pressure</span>: {{weather.altimHPA}} hPa / {{weather.altimINHG}} inHg
+        </div>
+        <div>
+          <span>Cloud cover</span>: {{weather.clouds}}
+        </div>
+        <div>
+          <span>Notes</span>: {{weather.notes}}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

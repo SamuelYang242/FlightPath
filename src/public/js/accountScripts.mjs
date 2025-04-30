@@ -103,24 +103,13 @@ async function displayFlight(origin, destination) {
 async function deleteFlight(evt) {
   const row = evt.target.parentElement.parentElement;
   const flightId = row.getAttribute('id');
-  try {
-    const res = await fetch(`/api/delete/${flightId}`,
-      {
-        method: 'DELETE'
-      });
-    const json = await res.json();
+  await fetch(`/api/delete/${flightId}`,
+    {
+      method: 'DELETE'
+    });
 
-    if (json.err) {
-      console.log(json.err);
-    }
-
-    // https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
-    window.location.reload();
-
-  }
-  catch (err) {
-    console.log(err);
-  }
+  // https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+  window.location.reload();
 }
 
 

@@ -149,12 +149,7 @@ app.post('/add', async (req, res) => {
     await newFlight.save();
     const user = await User.findById(req.user._id);
     user.flights.push(newFlight._id);
-    if (isNaN(user.flightTime)) {
-      user.flightTime = newFlight.duration;
-    }
-    else {
-      user.flightTime += newFlight.duration;
-    }
+    user.flightTime += newFlight.duration;
     await user.save();
     res.redirect('/account');
   }
@@ -163,5 +158,42 @@ app.post('/add', async (req, res) => {
   }
 })
 
+// Intermediate step, it just processes the airport input and then redirects to the right airport page
+app.get('/airport', (req, res) => {
+  const airport = util.getAirport(req.query.airport.toUpperCase().trim());
+  if (!airport) {
+    console.log("NOT FOUND");
+  }
+  else {
+    res.redirect(`/weather/${airport.ICAO}`);
+  }
+})
+
+app.get('/weather/:airport', async (req, res) => {
+  const airport = util.getAirport(req.params.airport);
+  const result = await fetch(`https://aviationweather.gov/api/data/metar?ids=${airport.ICAO}&format=json&taf=false`);
+  const raw = (await result.json())[0];
+  if (!raw) {
+    console.log("No METAR");
+    return;
+  }
+  const filtered = {
+    name: raw.name,
+    ICAO: raw.icaoId,
+    tempC: Math.round(raw.temp),
+    tempF: Math.round(raw.temp * 1.8 + 32),
+    wspd: Math.round(raw.wspd * 1.15),
+    wgst: raw.wgst ? Math.round(raw.wgst * 1.15) : null,
+    visib: raw.visib,
+    altimHPA: raw.altim,
+    altimINHG: (raw.altim * 0.03).toFixed(2),
+    clouds: "",
+    notes: "",
+  };
+  filtered.clouds = util.describeClouds(raw.clouds);
+  filtered.notes = util.describePrecip(raw.wxString);
+  console.log(filtered);
+  res.render('airport', { weather: filtered });
+})
 
 app.listen(process.env.PORT || 3000);

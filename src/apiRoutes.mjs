@@ -18,19 +18,15 @@ router.get('/:airport', (req, res) => {
 })
 
 router.delete('/delete/:flight', async (req, res) => {
-  try {
-    const user = await User.findById(req.user._id);
-    const flight = await Flight.findById(req.params.flight);
-    await Flight.findByIdAndDelete(req.params.flight);
-    const oldFlights = user.flights;
-    const newFlights = oldFlights.filter((flight) => flight.toString() !== req.params.flight);
-    user.flights = newFlights;
-    user.flightTime -= flight.duration;
-    await user.save();
-    res.json({ err: null });
-  } catch (err) {
-    res.json({ err: err });
-  }
+  const user = await User.findById(req.user._id);
+  const flight = await Flight.findById(req.params.flight);
+  await Flight.findByIdAndDelete(req.params.flight);
+  const oldFlights = user.flights;
+  const newFlights = oldFlights.filter((flight) => flight.toString() !== req.params.flight);
+  user.flights = newFlights;
+  user.flightTime -= flight.duration;
+  await user.save();
+  res.sendStatus(200);
 });
 
 export default router;

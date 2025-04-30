@@ -20,7 +20,7 @@ function checkFlightErrors(info) {
     throw ({ message: "*Please enter a valid airline code" });
   }
 
-  // Make sure the flight number is a number (flightNumber will be NaN or empty if invalid)
+  // Make sure the flight number is a number (flightNumber will be NaN if invalid)
   const flightNumber = getNumber(info.flight.toUpperCase(), airline);
   if (!flightNumber) {
     throw ({ message: "*Please enter a valid flight number" });
@@ -72,10 +72,50 @@ function getAirport(input) {
   return airportData.find((airport) => input === airport.IATA || input === airport.ICAO);
 }
 
+function describePrecip(wxString) {
+  if (!wxString) {
+    return "None";
+  }
+  const wxDescriptions = {
+    "RA": "rain",
+    "SN": "snow",
+    "TS": "thunderstorm",
+    "BR": "mist",
+    "DZ": "drizzle",
+    "FG": "fog"
+  };
+
+  const notes = Object.keys(wxDescriptions).reduce((acc, descriptor) => {
+    if (wxString.includes(descriptor)) {
+      acc += (acc === "" ? wxDescriptions[descriptor] : ", " + wxDescriptions[descriptor]);
+      return acc;
+    }
+    return acc;
+  }, "");
+
+  if (notes === "") {
+    return "None";
+  }
+
+  return notes;
+}
+
+function describeClouds(clouds) {
+  if (clouds.some((layer) => layer.cover === "CAVOK" || layer.cover === "CLR")) {
+    return "Clear";
+  }
+  else if (clouds.some((layer) => layer.cover === "OVC" || layer.cover === "BKN")) {
+    return "Cloudy";
+  }
+  return "Partly cloudy";
+}
+
 export {
   checkFlightErrors,
   getAirline,
   getNumber,
-  getAirport
+  getAirport,
+  describePrecip,
+  describeClouds
 }
 

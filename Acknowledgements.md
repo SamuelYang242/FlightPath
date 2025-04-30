@@ -20,6 +20,7 @@ The majority of authentication code, written in [auth.mjs](./src/auth.mjs) and [
 - All code using leaflet library in [testing](./testing) and [scripts.mjs](./src/public/js/scripts.mjs)  are from https://leafletjs.com/examples/quick-start/ and https://leafletjs.com/reference.html#map-example
 - All code using chartjs module in [testing](./testing) and [scripts.mjs](./src/public/js/scripts.mjs) are from https://www.chartjs.org/docs/latest/
 - [Reload from client-sized javascript]() from https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
+- Used weather API from https://aviationweather.gov/data/api/#/Data/dataMetars in [app.get('/weater/:airport')]() to fetch weather data. 
 
 
 ### Others:

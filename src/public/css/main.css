@@ -233,6 +233,10 @@ p {
   border-bottom-width: 5px;
 }
 
+#map a {
+  font-size: 16px;
+}
+
 #add-button-container {
   margin: 30px;
   width: 700px;

@@ -162,7 +162,7 @@ app.post('/add', async (req, res) => {
 app.get('/airport', (req, res) => {
   const airport = util.getAirport(req.query.airport.toUpperCase().trim());
   if (!airport) {
-    res.render('airport', { err: true });
+    res.render('airport', { err: true, user: req.user });
   }
   else {
     res.redirect(`/weather/${airport.ICAO}`);
@@ -174,7 +174,7 @@ app.get('/weather/:airport', async (req, res) => {
   const result = await fetch(`https://aviationweather.gov/api/data/metar?ids=${airport.ICAO}&format=json&taf=false`);
   const raw = (await result.json())[0];
   if (!raw) {
-    res.render('airport', { err: true });
+    res.render('airport', { err: true, user: req.user });
     return;
   }
   const filtered = {
@@ -192,7 +192,7 @@ app.get('/weather/:airport', async (req, res) => {
   };
   filtered.clouds = util.describeClouds(raw.clouds);
   filtered.notes = util.describePrecip(raw.wxString);
-  res.render('airport', { weather: filtered });
+  res.render('airport', { weather: filtered, user: req.user });
 })
 
 app.listen(process.env.PORT || 3000);

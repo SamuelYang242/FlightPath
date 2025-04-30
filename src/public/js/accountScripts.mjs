@@ -95,8 +95,8 @@ async function displayFlight(origin, destination) {
   const originLtLg = [origin.Latitude, origin.Longitude];
   const destinationLtLg = [destination.Latitude, destination.Longitude];
 
-  L.marker(originLtLg).bindPopup(`<p>${origin.Name}</p>`).addTo(map);
-  L.marker(destinationLtLg).bindPopup(`<p>${destination.Name}</p>`).addTo(map);
+  L.marker(originLtLg).bindPopup(`<a href="/weather/${origin.ICAO}">${origin.Name}</a>`).addTo(map);
+  L.marker(destinationLtLg).bindPopup(`<a href="/weather/${destination.ICAO}">${destination.Name}</a>`).addTo(map);
   L.polyline([originLtLg, destinationLtLg], { color: 'black', weight: '1' }).addTo(map);
 }
 

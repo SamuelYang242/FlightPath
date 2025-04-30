@@ -2380,6 +2380,11 @@
     "ICAO": "POE"
   },
   {
+    "Name": "Porter Airlines",
+    "IATA": "PD",
+    "ICAO": "PTR"
+  },
+  {
     "Name": "Portugalia",
     "IATA": "NI",
     "ICAO": "PGA"

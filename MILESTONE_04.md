@@ -15,11 +15,11 @@ https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment
 
 URL for deployed site 
 ---
-(TODO: add url for your dpeloyed site; it's okay if it's different from the generated url from the grader's codespace)
+https://glowing-space-telegram-g4r656p76795hvjrg-3000.app.github.dev
 
 URL for form 1 (from previous milestone) 
 ---
-(TODO: add link to a functioning form)
+https://glowing-space-telegram-g4r656p76795hvjrg-3000.app.github.dev/login
 
 Special Instructions for Form 1
 ---
@@ -29,7 +29,8 @@ You will be taken to a pre-existing account page if you use the provided user, o
 
 URL for form 2 (for current milestone)
 ---
-(TODO: if applicable, add link to page that shows results of submitting form)
+Form: https://glowing-space-telegram-g4r656p76795hvjrg-3000.app.github.dev/add
+Result: https://glowing-space-telegram-g4r656p76795hvjrg-3000.app.github.dev/account
 
 Special Instructions for Form 2
 ---
@@ -39,7 +40,9 @@ After pressing the add button, this new flight will show up in your account dash
 
 URL for form 3 (from previous milestone) 
 ---
-(TODO: add link to a functioning form)
+https://glowing-space-telegram-g4r656p76795hvjrg-3000.app.github.dev
+
+It is accessible from any page on the website
 
 Special Instructions for Form 3
 ---
@@ -47,11 +50,11 @@ In the header banner of the website, enter an airport's name to be redirected to
 
 First link to github line number(s) for constructor, HOF, etc.
 ---
-(TODO: add link to line number(s) here) 
+https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-SamuelYang24/blob/7c29720cd05cd0d527099dbf520d7ad6327e1ea7/src/public/js/accountScripts.mjs#L135
 
 Second link to github line number(s) for constructor, HOF, etc.
 ---
-(TODO: add link to line number(s) here) 
+https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-SamuelYang24/blob/7c29720cd05cd0d527099dbf520d7ad6327e1ea7/src/utils.mjs#L88
 
 Short description for links above
 ---
@@ -83,7 +86,7 @@ passportjs:
 - [app.mjs](./src/app.mjs)
 
 aviationweather.gov API: 
-- [app.get('weather/:airport')]()
+- [app.get('weather/:airport')](https://github.com/nyu-csci-ua-0467-001-002-spring-2025/final-project-deployment-SamuelYang24/blob/7c29720cd05cd0d527099dbf520d7ad6327e1ea7/src/app.mjs#L172)
 
 Optional project notes 
 --- 

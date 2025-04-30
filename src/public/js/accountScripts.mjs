@@ -26,7 +26,8 @@ let airlineData = {
   labels: Object.keys(airlineObj),
   datasets: [{
     label: "Minutes",
-    data: Object.values(airlineObj)
+    data: Object.values(airlineObj),
+    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40', '#C9CBCF', '#8E44AD', '#2ECC71', '#E74C3C', '#1ABC9C', '#F39C12', '#3498DB', '#9B59B6', '#34495E']
   }]
 };
 
@@ -34,7 +35,9 @@ let aircraftData = {
   labels: Object.keys(aircraftObj),
   datasets: [{
     label: "Minutes",
-    data: Object.values(aircraftObj)
+    data: Object.values(aircraftObj),
+    backgroundColor: ['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#f032e6',
+      '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000']
   }]
 };
 

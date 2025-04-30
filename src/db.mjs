@@ -7,7 +7,6 @@ const UserSchema = new mongoose.Schema({
   password: { type: String, required: true },
   flights: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Flight' }],
   flightTime: { type: Number },
-  favoriteAirports: [{ type: String }]
 });
 
 const FlightSchema = new mongoose.Schema({

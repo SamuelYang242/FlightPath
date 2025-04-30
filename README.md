@@ -22,7 +22,6 @@ An example User with referenced list of flights:
   username: "SamuelYang",
   password: //hashed password
   flights: //Array of referenced flight documents
-  favourite_airports: ["CYYZ", "KLGA", "EDDF"] // list of strings
   flight_time: "40H22M" //String, will be converted to time IF ever needed
 }
 ```
@@ -78,7 +77,6 @@ An example Flight
 2. As a user, I want log in to the site so that I can see my information
 3. As a user, I want to add a flight to my account so that I can record my flight information
 4. As a user, I want to view my past flight history and statistics so that I can see my travels in an interactive way
-5. As a user, I want to favourite airports so that I can have easy access to weather information I need frequently
 
 ## Research Topics
 

@@ -41,36 +41,6 @@ An example Flight
 }
 ```
 
-## [Link to Commented First Draft Schema](db.mjs) 
-
-## Wireframes
-
-(__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
-
-/home - home page before logging in
-
-![home](documentation/home.jpeg)
-
-/register - register and login as new user
-
-![register](documentation/register.jpeg)
-
-/account - display account information
-
-![account](documentation/account.jpeg)
-
-/airport - display airport weather
-
-![airport](documentation/airport.jpeg)
-
-/add - add a flight
-
-![add](documentation/add.jpeg)
-
-## Site map
-
-![site map](documentation/wire_map.jpeg)
-
 ## User Stories
 
 1. As a non-registered user, I want to search up airports so that I can see current weather information
